@@ -1,4 +1,4 @@
-# Examen Parcial 2026-1: Red Neuronal Perceptrón en Datos Estructurados
+# Aplicación de Redes Neuronales para la clasificación de ingresos anual (> $50K)
 
 Este repositorio contiene un proyecto enfocado en el ciclo completo de diseño, optimización, interpretación y despliegue de un modelo de Machine Learning basado en una red neuronal profunda tipo **Perceptrón Multicapa (MLP)** para datos tabulares estructurados.
 
