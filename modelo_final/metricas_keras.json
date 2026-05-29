@@ -1,0 +1,103 @@
+{
+  "modelo_base": {
+    "experimento": "01_modelo_base",
+    "params": {
+      "arquitectura": [
+        64,
+        32
+      ],
+      "pipeline_principal": "log"
+    },
+    "pipeline_log": {
+      "nombre": "Base / log",
+      "auc": 0.9102702663189682,
+      "pr_auc": 0.7778763583542532,
+      "f1": 0.6858337689492943,
+      "acc": 0.8154365851161839
+    },
+    "pipeline_disc": {
+      "nombre": "Base / disc",
+      "auc": 0.9229753481099396,
+      "pr_auc": 0.8179340396619453,
+      "f1": 0.7016300496102055,
+      "acc": 0.8276179752277613
+    },
+    "epocas_entrenadas": 28
+  },
+  "modelo_tuneado": {
+    "experimento": "02_modelo_tuneado_optuna",
+    "params": {
+      "capas": [
+        64,
+        256,
+        64
+      ],
+      "dropout": 0.18871051409744513,
+      "l2": 0.007298860321743125,
+      "lr": 0.0009032082239914146,
+      "batch": 256,
+      "optuna_trial": 14,
+      "optuna_val_auc": 0.9109098315238953
+    },
+    "pipeline_log": {
+      "nombre": "Tuneado / log",
+      "auc": 0.912035666828866,
+      "pr_auc": 0.7834711920373734,
+      "f1": 0.6840846994535519,
+      "acc": 0.8106254478452247
+    },
+    "pipeline_disc": {
+      "nombre": "Tuneado / disc",
+      "auc": 0.9245488491268228,
+      "pr_auc": 0.8192873983464671,
+      "f1": 0.6979958534899793,
+      "acc": 0.8210666393694339
+    },
+    "epocas_entrenadas": 32
+  },
+  "modelo_final": {
+    "experimento": "03_modelo_final",
+    "params": {
+      "capas": [
+        64,
+        256,
+        64
+      ],
+      "dropout": 0.18871051409744513,
+      "l2": 0.007298860321743125,
+      "lr": 0.0009032082239914146,
+      "batch": 256,
+      "entrenado_en": "train_full"
+    },
+    "pipeline_log": {
+      "nombre": "Final / log",
+      "auc": 0.9133527454578126,
+      "pr_auc": 0.7863411197739483,
+      "f1": 0.693381037567084,
+      "acc": 0.8245470365441704
+    },
+    "pipeline_disc": {
+      "nombre": "Final / disc",
+      "auc": 0.9246761393874113,
+      "pr_auc": 0.820574351257037,
+      "f1": 0.7125759528631928,
+      "acc": 0.8402088238304842
+    },
+    "epocas_entrenadas": 61
+  },
+  "optuna": {
+    "n_trials": 30,
+    "mejor_trial": 14,
+    "mejor_val_auc": 0.9109098315238953,
+    "mejores_params": {
+      "n_capas": 3,
+      "capa_0": 64,
+      "capa_1": 256,
+      "capa_2": 64,
+      "dropout": 0.18871051409744513,
+      "l2": 0.007298860321743125,
+      "lr": 0.0009032082239914146,
+      "batch": 256
+    }
+  }
+}

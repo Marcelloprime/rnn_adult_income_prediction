@@ -1,0 +1,25 @@
+{
+  "experimento": "01_modelo_base",
+  "params": {
+    "arquitectura": [
+      64,
+      32
+    ],
+    "pipeline_principal": "log"
+  },
+  "pipeline_log": {
+    "nombre": "Base / log",
+    "auc": 0.9102702663189682,
+    "pr_auc": 0.7778763583542532,
+    "f1": 0.6858337689492943,
+    "acc": 0.8154365851161839
+  },
+  "pipeline_disc": {
+    "nombre": "Base / disc",
+    "auc": 0.9229753481099396,
+    "pr_auc": 0.8179340396619453,
+    "f1": 0.7016300496102055,
+    "acc": 0.8276179752277613
+  },
+  "epocas_entrenadas": 28
+}

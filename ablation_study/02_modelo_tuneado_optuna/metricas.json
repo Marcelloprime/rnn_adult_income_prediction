@@ -1,0 +1,31 @@
+{
+  "experimento": "02_modelo_tuneado_optuna",
+  "params": {
+    "capas": [
+      64,
+      256,
+      64
+    ],
+    "dropout": 0.18871051409744513,
+    "l2": 0.007298860321743125,
+    "lr": 0.0009032082239914146,
+    "batch": 256,
+    "optuna_trial": 14,
+    "optuna_val_auc": 0.9109098315238953
+  },
+  "pipeline_log": {
+    "nombre": "Tuneado / log",
+    "auc": 0.912035666828866,
+    "pr_auc": 0.7834711920373734,
+    "f1": 0.6840846994535519,
+    "acc": 0.8106254478452247
+  },
+  "pipeline_disc": {
+    "nombre": "Tuneado / disc",
+    "auc": 0.9245488491268228,
+    "pr_auc": 0.8192873983464671,
+    "f1": 0.6979958534899793,
+    "acc": 0.8210666393694339
+  },
+  "epocas_entrenadas": 32
+}

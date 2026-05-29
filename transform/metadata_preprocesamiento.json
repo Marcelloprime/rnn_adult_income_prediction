@@ -1,0 +1,63 @@
+{
+  "dataset": "Adult / Census Income (UCI id=2)",
+  "random_state": 42,
+  "test_size": 0.2,
+  "estratificado": true,
+  "pipeline_log": {
+    "descripcion": "Recomendado para red neuronal (valores continuos)",
+    "X_train_shape": [
+      39073,
+      51
+    ],
+    "X_test_shape": [
+      9769,
+      51
+    ],
+    "features_num": [
+      "age",
+      "hours-per-week",
+      "log_capital_gain",
+      "log_capital_loss"
+    ],
+    "features_cat_base": [
+      "workclass",
+      "marital-status",
+      "relationship",
+      "race",
+      "sex",
+      "region",
+      "nivel_educativo",
+      "perfil_ocupacional"
+    ],
+    "scaler": "StandardScaler",
+    "ohe_drop": "first"
+  },
+  "pipeline_disc": {
+    "descripcion": "Para modelos clásicos (capital tratado como categórico)",
+    "X_train_shape": [
+      39073,
+      64
+    ],
+    "X_test_shape": [
+      9769,
+      64
+    ]
+  },
+  "target": {
+    "columna": "income",
+    "clases": {
+      "0": "<=50K",
+      "1": ">50K"
+    },
+    "y_train_shape": [
+      39073
+    ],
+    "y_test_shape": [
+      9769
+    ],
+    "balance_train": {
+      "clase_0": 29724,
+      "clase_1": 9349
+    }
+  }
+}
