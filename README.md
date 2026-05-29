@@ -9,6 +9,9 @@ Este repositorio contiene un proyecto enfocado en el ciclo completo de diseño, 
 * **Selene Ramos**
 
 ---
+ ## 🌍 Contexto
+La predicción de ingresos a partir de datos sociodemográficos tiene aplicaciones directas en sectores como finanzas, políticas públicas y sistemas de crédito. El dataset Adult/Census Income, recopilado del Censo de EE.UU. de 1994, es un benchmark clásico en Machine Learning que permite estudiar el comportamiento de modelos en datos tabulares reales con desbalance de clases, valores faltantes y variables mixtas.
+Este proyecto aplica el ciclo completo de ML con énfasis en redes neuronales profundas (MLP), priorizando la interpretabilidad y reproducibilidad del proceso.
 
 ## 🎯 Objetivo del Proyecto
 Construir, ajustar, interpretar y desplegar un modelo predictivo basado en redes neuronales para clasificar si los ingresos anuales de un individuo superan los \$50,000 dólares (`>50K` o `<=50K`), utilizando el conjunto de datos histórico **Adult / Census Income Dataset** de la Oficina de Censos de los EE. UU. (1994).
@@ -17,7 +20,20 @@ El proyecto demuestra el dominio de:
 `Preprocesamiento` ➡️ `Ingeniería de Variables` ➡️ `Modelado & Tuning` ➡️ `Ablation Study` ➡️ `Evaluación & Interpretabilidad` ➡️ `Despliegue Interactivo`
 
 ---
+## 📊 Descripción del Dataset
+| Atributo         | Detalle                              |
+|------------------|--------------------------------------|
+| Fuente           | UCI Machine Learning Repository      |
+| Año              | 1994 (Censo EE.UU.)                  |
+| Instancias       | 48,842 registros                     |
+| Variables        | 14 features + 1 variable objetivo    |
+| Tipos            | 6 numéricas / 8 categóricas          |
+| Variable Target  | Ingreso `>50K` o `<=50K` (binaria)   |
+| Desbalance       | ~76% clase ≤50K / ~24% clase >50K   |
 
+🔗 [UCI Adult Dataset](https://archive.ics.uci.edu/dataset/2/adult)
+
+---
 ## 📂 Estructura del Repositorio
 
 El proyecto está organizado de manera secuencial siguiendo los requerimientos estrictos de la rúbrica del examen:
@@ -35,6 +51,10 @@ El proyecto está organizado de manera secuencial siguiendo los requerimientos e
 ├── requirements.txt                       # Dependencias del proyecto (pip)
 └── README.md                              # Documentación general del proyecto (este archivo)
 ```
+
+---
+
+<img width="1408" height="768" alt="Gemini_Generated_Image_x3e1xhx3e1xhx3e1" src="https://github.com/user-attachments/assets/06025091-b591-430f-8ac4-8c52cc61f805" />
 
 ---
 
@@ -64,3 +84,5 @@ Para asegurar la **reproducibilidad** total del proyecto (punto crítico de pena
    ```bash
    pip install -r requirements.txt
    ```
+
+
