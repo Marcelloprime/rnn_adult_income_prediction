@@ -34,6 +34,17 @@ El proyecto demuestra el dominio de:
 🔗 [UCI Adult Dataset](https://archive.ics.uci.edu/dataset/2/adult)
 
 ---
+## 📋 Variables del Dataset
+| Variable       | Tipo        | Descripción                        |
+|----------------|-------------|------------------------------------|
+| age            | Numérica    | Edad del individuo                 |
+| education-num  | Numérica    | Años de educación                  |
+| capital-gain   | Numérica    | Ganancia de capital registrada     |
+| occupation     | Categórica  | Tipo de ocupación laboral          |
+| hours-per-week | Numérica    | Horas trabajadas por semana        |
+| income         | **Target**  | >50K o <=50K (variable objetivo)   |
+
+---
 ## 📂 Estructura del Repositorio
 
 El proyecto está organizado de manera secuencial siguiendo los requerimientos estrictos de la rúbrica del examen:
