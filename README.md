@@ -34,6 +34,17 @@ El proyecto demuestra el dominio de:
 🔗 [UCI Adult Dataset](https://archive.ics.uci.edu/dataset/2/adult)
 
 ---
+## 📋 Variables del Dataset
+| Variable       | Tipo        | Descripción                        |
+|----------------|-------------|------------------------------------|
+| age            | Numérica    | Edad del individuo                 |
+| education-num  | Numérica    | Años de educación                  |
+| capital-gain   | Numérica    | Ganancia de capital registrada     |
+| occupation     | Categórica  | Tipo de ocupación laboral          |
+| hours-per-week | Numérica    | Horas trabajadas por semana        |
+| income         | **Target**  | >50K o <=50K (variable objetivo)   |
+
+---
 ## 📂 Estructura del Repositorio
 
 El proyecto está organizado de manera secuencial siguiendo los requerimientos estrictos de la rúbrica del examen:
@@ -85,4 +96,28 @@ Para asegurar la **reproducibilidad** total del proyecto (punto crítico de pena
    pip install -r requirements.txt
    ```
 
+---
+## 🤖 Modelos Implementados
+Este proyecto entrena y compara tres modelos de Machine Learning sobre el mismo
+conjunto de datos y condiciones controladas de experimentación.
+
+## Modelo 1 — MLP con Keras / TensorFlow
+Red neuronal profunda tipo Perceptrón Multicapa construida con la API funcional
+de Keras sobre TensorFlow 2.x. Es el modelo principal del proyecto.
+Su arquitectura final consiste en dos capas ocultas de 128 y 64 neuronas con
+activación ReLU, BatchNormalization y Dropout entre capas para regularización,
+y una capa de salida con activación Sigmoid para la clasificación binaria.
+Los hiperparámetros fueron optimizados automáticamente con Optuna en 30 trials.
+
+## Modelo 2 — MLP con PyTorch
+Implementación equivalente de la misma arquitectura MLP usando PyTorch puro.
+Su propósito es verificar que los resultados del modelo Keras son consistentes
+e independientes del framework utilizado. Comparte la misma lógica de
+entrenamiento: optimizador Adam, EarlyStopping, class weights y tuning con Optuna.
+
+## Modelo 3 — XGBoost
+Modelo de gradient boosting incluido como punto de comparación externo.
+Representa el estado del arte en clasificación con datos tabulares estructurados
+y permite evaluar si la complejidad de las redes neuronales está justificada
+frente a un modelo más clásico. También fue optimizado con Optuna en 30 trials.
 
