@@ -1,0 +1,30 @@
+{
+  "experimento": "03_modelo_final",
+  "params": {
+    "n_estimators": 1100,
+    "max_depth": 7,
+    "learning_rate": 0.02685885189360138,
+    "subsample": 0.9630995159864814,
+    "colsample_bytree": 0.6303152210546972,
+    "min_child_weight": 1,
+    "gamma": 4.8211400345489965e-08,
+    "reg_lambda": 0.02418879832844087,
+    "reg_alpha": 3.089981531660265e-08,
+    "entrenado_en": "train_full"
+  },
+  "pipeline_nat": {
+    "nombre": "Final / nativo",
+    "auc": 0.9322959997301665,
+    "pr_auc": 0.838804834421552,
+    "f1": 0.7163057096831932,
+    "acc": 0.8377520728836114
+  },
+  "pipeline_ohe": {
+    "nombre": "Final / one-hot",
+    "auc": 0.9321386927972303,
+    "pr_auc": 0.8377251923914524,
+    "f1": 0.7128360334698237,
+    "acc": 0.8348858634455932
+  },
+  "epocas_entrenadas": 464
+}

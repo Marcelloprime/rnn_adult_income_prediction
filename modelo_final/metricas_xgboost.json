@@ -1,0 +1,128 @@
+{
+  "feature_engineering": {
+    "num_cols": [
+      "age",
+      "hours-per-week",
+      "capital-gain",
+      "capital-loss",
+      "education-num"
+    ],
+    "cat_cols": [
+      "workclass",
+      "marital-status",
+      "occupation",
+      "relationship",
+      "race",
+      "sex",
+      "region"
+    ],
+    "regionalizar": true,
+    "sin_scaler": true,
+    "sin_log1p": true,
+    "sin_discretizacion": true,
+    "education_num_cruda": true,
+    "occupation_granularidad_completa": true
+  },
+  "modelo_base": {
+    "experimento": "01_modelo_base",
+    "params": {
+      "n_estimators": 600,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "pipeline_principal": "nat",
+      "regionalizar": true
+    },
+    "pipeline_nat": {
+      "nombre": "Base / nativo",
+      "auc": 0.9315130912406688,
+      "pr_auc": 0.8361430910466209,
+      "f1": 0.7115998581057112,
+      "acc": 0.8335551233493704
+    },
+    "pipeline_ohe": {
+      "nombre": "Base / one-hot",
+      "auc": 0.9314095725729463,
+      "pr_auc": 0.8353971878870303,
+      "f1": 0.7150699486452984,
+      "acc": 0.8352953219367386
+    },
+    "epocas_entrenadas": 184
+  },
+  "modelo_tuneado": {
+    "experimento": "02_modelo_tuneado_optuna",
+    "params": {
+      "n_estimators": 1100,
+      "max_depth": 7,
+      "learning_rate": 0.02685885189360138,
+      "subsample": 0.9630995159864814,
+      "colsample_bytree": 0.6303152210546972,
+      "min_child_weight": 1,
+      "gamma": 4.8211400345489965e-08,
+      "reg_lambda": 0.02418879832844087,
+      "reg_alpha": 3.089981531660265e-08,
+      "optuna_trial": 27,
+      "optuna_val_auc": 0.9304290573905409
+    },
+    "pipeline_nat": {
+      "nombre": "Tuneado / nativo",
+      "auc": 0.9322040790671957,
+      "pr_auc": 0.8376699601591829,
+      "f1": 0.7156617909382804,
+      "acc": 0.8368307912785341
+    },
+    "pipeline_ohe": {
+      "nombre": "Tuneado / one-hot",
+      "auc": 0.931657533885456,
+      "pr_auc": 0.8363884818624508,
+      "f1": 0.7129941499734089,
+      "acc": 0.8342716757088751
+    },
+    "epocas_entrenadas": 448
+  },
+  "modelo_final": {
+    "experimento": "03_modelo_final",
+    "params": {
+      "n_estimators": 1100,
+      "max_depth": 7,
+      "learning_rate": 0.02685885189360138,
+      "subsample": 0.9630995159864814,
+      "colsample_bytree": 0.6303152210546972,
+      "min_child_weight": 1,
+      "gamma": 4.8211400345489965e-08,
+      "reg_lambda": 0.02418879832844087,
+      "reg_alpha": 3.089981531660265e-08,
+      "entrenado_en": "train_full"
+    },
+    "pipeline_nat": {
+      "nombre": "Final / nativo",
+      "auc": 0.9322959997301665,
+      "pr_auc": 0.838804834421552,
+      "f1": 0.7163057096831932,
+      "acc": 0.8377520728836114
+    },
+    "pipeline_ohe": {
+      "nombre": "Final / one-hot",
+      "auc": 0.9321386927972303,
+      "pr_auc": 0.8377251923914524,
+      "f1": 0.7128360334698237,
+      "acc": 0.8348858634455932
+    },
+    "epocas_entrenadas": 464
+  },
+  "optuna": {
+    "n_trials": 30,
+    "mejor_trial": 27,
+    "mejor_val_auc": 0.9304290573905409,
+    "mejores_params": {
+      "n_estimators": 1100,
+      "max_depth": 7,
+      "learning_rate": 0.02685885189360138,
+      "subsample": 0.9630995159864814,
+      "colsample_bytree": 0.6303152210546972,
+      "min_child_weight": 1,
+      "gamma": 4.8211400345489965e-08,
+      "reg_lambda": 0.02418879832844087,
+      "reg_alpha": 3.089981531660265e-08
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "experimento": "03_modelo_final",
+  "params": {
+    "capas": [
+      64,
+      128
+    ],
+    "dropout": 0.17497267400998273,
+    "l2": 0.006752029118128939,
+    "lr": 0.00017533980688231194,
+    "batch": 256,
+    "entrenado_en": "train_full"
+  },
+  "pipeline_log": {
+    "nombre": "Final / log",
+    "auc": 0.9156434233442108,
+    "pr_auc": 0.7934574267852825,
+    "f1": 0.684982302376538,
+    "acc": 0.8086805200122837
+  },
+  "pipeline_disc": {
+    "nombre": "Final / disc",
+    "auc": 0.9252875528140904,
+    "pr_auc": 0.8216605866201808,
+    "f1": 0.7027589796980739,
+    "acc": 0.8246494011669567
+  },
+  "epocas_entrenadas": 52
+}

@@ -1,0 +1,25 @@
+{
+  "experimento": "01_modelo_base",
+  "params": {
+    "n_estimators": 600,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "pipeline_principal": "nat",
+    "regionalizar": true
+  },
+  "pipeline_nat": {
+    "nombre": "Base / nativo",
+    "auc": 0.9315130912406688,
+    "pr_auc": 0.8361430910466209,
+    "f1": 0.7115998581057112,
+    "acc": 0.8335551233493704
+  },
+  "pipeline_ohe": {
+    "nombre": "Base / one-hot",
+    "auc": 0.9314095725729463,
+    "pr_auc": 0.8353971878870303,
+    "f1": 0.7150699486452984,
+    "acc": 0.8352953219367386
+  },
+  "epocas_entrenadas": 184
+}
