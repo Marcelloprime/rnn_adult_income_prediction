@@ -552,9 +552,9 @@ with left:
     st.markdown('<div class="section-label">Capital Financiero</div>', unsafe_allow_html=True)
     c5, c6 = st.columns(2)
     with c5:
-        capital_gain = st.number_input("Capital gain ($)", min_value=0, max_value=99999, value=0)
+        capital_gain = st.number_input("Capital gain ($)", min_value=0, max_value=9999999, value=0)
     with c6:
-        capital_loss = st.number_input("Capital loss ($)", min_value=0, max_value=4356, value=0)
+        capital_loss = st.number_input("Capital loss ($)", min_value=0, max_value=9999999, value=0)
 
     st.markdown("</div>", unsafe_allow_html=True)
 
