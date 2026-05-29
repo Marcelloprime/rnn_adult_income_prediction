@@ -1,0 +1,4 @@
+Modelo,Pipeline,ROC-AUC,PR-AUC,F1,Accuracy
+XGBoost (nativo),Final / nativo,0.9323,0.8388,0.7163,0.8378
+PyTorch (disc),Final / disc,0.9253,0.8217,0.7028,0.8246
+Keras (disc),Final / disc,0.9242,0.8196,0.6991,0.8216

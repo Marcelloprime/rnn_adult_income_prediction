@@ -1,0 +1,7 @@
+Modelo,Tipo,ROC-AUC,PR-AUC,F1,Accuracy
+XGBoost (FE lean),Clásico,0.9323,0.8388,0.7163,0.8378
+PyTorch — Modelo final,Clásico,0.9156,0.7935,0.685,0.8087
+Keras — Modelo final,Clásico,0.9149,0.7933,0.6858,0.8104
+SVM (RBF),Clásico,0.8996,0.7428,0.6891,0.8399
+Logistic Regression,Clásico,0.8945,0.7242,0.6623,0.7976
+Random Forest,Clásico,0.8854,0.736,0.6622,0.833
