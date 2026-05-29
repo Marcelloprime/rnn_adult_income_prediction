@@ -1,12 +1,12 @@
 Modelo,Paso,ROC-AUC,PR-AUC,F1,Accuracy
-Keras,Sin FE / sin tuning,0.9123,0.7826,0.6849,0.8161
-Keras,Con FE / sin tuning,0.8801,0.6924,0.638,0.7784
-Keras,Con FE / con tuning,0.8851,0.6985,0.6448,0.777
+Keras,Sin FE / sin tuning,0.9124,0.7841,0.6832,0.8127
+Keras,Con FE / sin tuning,0.8798,0.6922,0.6396,0.7822
+Keras,Con FE / con tuning,0.8858,0.7005,0.6468,0.7799
 Keras,Modelo final,0.9149,0.7933,0.6858,0.8104
-PyTorch,Sin FE / sin tuning,0.9132,0.7846,0.6805,0.8055
-PyTorch,Con FE / sin tuning,0.912,0.7844,0.6811,0.811
-PyTorch,Con FE / con tuning,0.9133,0.7868,0.6824,0.8103
-PyTorch,Modelo final,0.9156,0.7935,0.685,0.8087
+PyTorch,Sin FE / sin tuning,0.9132,0.7847,0.6811,0.806
+PyTorch,Con FE / sin tuning,0.912,0.7835,0.6936,0.8233
+PyTorch,Con FE / con tuning,0.9119,0.7827,0.6802,0.8062
+PyTorch,Modelo final,0.9136,0.7884,0.6812,0.806
 XGBoost,Sin FE / sin tuning,0.9315,0.8355,0.712,0.8332
 XGBoost,Con FE / sin tuning,0.9315,0.8361,0.7116,0.8336
 XGBoost,Con FE / con tuning,0.9322,0.8377,0.7157,0.8368
